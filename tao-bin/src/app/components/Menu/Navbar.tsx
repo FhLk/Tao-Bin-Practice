@@ -1,25 +1,15 @@
 import React from 'react'
+import CategoryBTN from './CategoryBTN'
 
 function NavbarCategory() {
   return (
-    <div>
-        <ul className="flex border-b">
-            <li className="-mb-px mr-1">
-                <a className="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4  font-semibold" href="/">Recommend</a>
-            </li>
-            <li className="mr-1">
-                <a className="bg-white inline-block rounded-t py-2 px-4 font-semibold" href="/">Coffee</a>
-            </li>
-            <li className="mr-1">
-                <a className="bg-white inline-block rounded-t py-2 px-4 font-semibold" href="/">Milk</a>
-            </li>
-            <li className="mr-1">
-                <a className="bg-white inline-block rounded-t py-2 px-4 font-semibold" href="/">Tea</a>
-            </li>
-            <li className="mr-1">
-                <a className="bg-white inline-block rounded-t py-2 px-4 font-semibold" href="/">Soda</a>
-            </li>
-        </ul>
+    <div className='w-full h-[90px] flex justify-evenly border-b-4 border-b-[#FFF2D7]'>
+      <button className='rounded-t-xl text-7xl'> &#10094; </button>
+      <CategoryBTN title='Recommend Menu' id={1}/>
+      <CategoryBTN title='Coffee' id={2}/>
+      <CategoryBTN title='Tea' id={3}/>
+      <CategoryBTN title='Milk' id={4}/>
+      <CategoryBTN title='Soda and Other' id={5}/>
     </div>
   )
 }

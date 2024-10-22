@@ -4,7 +4,7 @@ import MenuPage from "./view/menu/page";
 
 export default function Home() {
   return (
-      <main className="min-h-screen w-full px-[40px] py-3">
+      <main className="min-h-screen w-full px-[10px] py-3">
         <MenuPage/>
         {/* <CategoryPage/> */}
       </main>
