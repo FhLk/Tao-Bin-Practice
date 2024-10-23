@@ -11,7 +11,7 @@ const CategoryBTN : FC<Title> = ({title, id}) =>{
         console.log(categoryID);   
     }
   return (
-    <button className='w-[200px] h-[200px] flex justify-center items-center rounded-full bg-[#FFF2D7] hover:bg-white'
+    <button className='w-[200px] h-[200px] flex justify-center items-center rounded-full bg-[#FFF2D7] hover:bg-white text-3xl'
     onClick={()=> goToMenu(id)}>
         <p>{title}</p>
     </button>

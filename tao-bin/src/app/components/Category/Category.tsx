@@ -4,7 +4,7 @@ import CategoryBTN from './CategoryBTN'
 
 const Category : FC = () => {
   return (
-    <div className='grid grid-cols-2 gap-4 text-xl justify-items-center w-full'>
+    <div className='grid grid-cols-2 gap-4 text-xl justify-items-center w-full font-semibold'>
       <CategoryBTN title='Recommend Menu' id={1}/>
       <CategoryBTN title='Coffee' id={2}/>
       <CategoryBTN title='Tea' id={3}/>

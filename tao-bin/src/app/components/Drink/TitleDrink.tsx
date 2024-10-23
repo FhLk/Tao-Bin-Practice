@@ -3,6 +3,7 @@ import React from 'react'
 function TitleMenu() {
     return (
         <div>
+            <button className='w-[100px] text-7xl font-semibold absolute left-5'>&#10094;</button>
             <div className='bg-white w-[200px] rounded-full '>
                 <img src='./glass.svg' height={200} width={200} />
             </div>
