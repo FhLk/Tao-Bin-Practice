@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TitleMenu() {
+function TitleDrink() {
     return (
         <div>
             <button className='w-[100px] text-7xl font-semibold absolute left-5'>&#10094;</button>
@@ -15,4 +15,4 @@ function TitleMenu() {
     )
 }
 
-export default TitleMenu
+export default TitleDrink
