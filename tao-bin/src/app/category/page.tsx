@@ -1,5 +1,5 @@
 "use client"
-import Category from "../../components/Category/Category"
+import Category from '@/components/Category/Category'
 import React from 'react'
 
 function CategoryPage() {

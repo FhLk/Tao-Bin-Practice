@@ -1,8 +1,8 @@
 import Image from "next/image";
-import CategoryPage from "./view/category/page";
-import MenuPage from "./view/menu/page";
-import DrinkPage from "./view/drink/page";
-import PaymentPage from "./view/payment/page";
+import CategoryPage from "./category/page";
+import MenuPage from "./menu/[drink]/page";
+import DrinkPage from "./drink/page";
+import PaymentPage from "./payment/page";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         {/* <PaymentPage/> */}
         {/* <DrinkPage/> */}
         {/* <MenuPage/> */}
-        {/* <CategoryPage/> */}
+        <CategoryPage/>
       </main>
   );
 }

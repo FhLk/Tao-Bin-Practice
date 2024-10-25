@@ -1,6 +1,6 @@
 "use client"
-import ListPayment from '@/app/components/Payment/ListPayment'
-import TitlePayment from '@/app/components/Payment/TitlePayment'
+import ListPayment from '@/components/Payment/ListPayment'
+import TitlePayment from '@/components/Payment/TitlePayment'
 import React from 'react'
 
 function PaymentPage() {
