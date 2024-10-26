@@ -1,5 +1,4 @@
 "use client"
-import { DataProvider } from '@/app/DataContext'
 import ListDrink from '@/components/Menu/ListDrink'
 import NavbarCategory from '@/components/Menu/Navbar'
 import { useParams } from 'next/navigation'
