@@ -19,6 +19,23 @@ body {
   background: var(--background);
 }
 
+.type-drink-btn-left{
+  @apply w-full border-r-4 border-[#F8C794] hover:bg-[#C1C1C1] rounded-l-full;
+}
+
+.type-drink-btn-middle{
+  @apply w-full border-x-4 border-[#F8C794] hover:bg-[#C1C1C1];
+}
+
+.type-drink-btn-right{
+  @apply w-full border-l-4 border-[#F8C794] hover:bg-[#C1C1C1] rounded-r-full;
+}
+
+.type-drink-btn-left-selected{
+  @apply bg-[#C1C1C1] w-full rounded-l-full border-r-4 border-[#F8C794];
+}
+
+
 /* @layer utilities {
   .text-balance {
     text-wrap: balance;
