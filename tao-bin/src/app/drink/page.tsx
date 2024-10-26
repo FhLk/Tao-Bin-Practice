@@ -4,8 +4,8 @@ import StrawLib from '@/components/Drink/StrawLib'
 import SugarLevel from '@/components/Drink/SugarLevel'
 import TitleDrink from '@/components/Drink/TitleDrink'
 import TypeDrink from '@/components/Drink/TypeDrink'
-import React, { useEffect } from 'react'
-import { DataProvider, useData } from '../DataContext'
+import React from 'react'
+import { useData } from '../DataContext'
 
 function DrinkPage() {
   const { data } = useData();  
