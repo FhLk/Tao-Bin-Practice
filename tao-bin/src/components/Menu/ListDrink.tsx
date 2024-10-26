@@ -10,7 +10,8 @@ interface DrinkData {
 
 const ListDrink : FC<{id : string}>  = ({ id }) => {
   const [displayDrinks ,setDisplayDrinks] = useState<DrinkData[]>([])
-  const [drinks , setDrinks] = useState<DrinkData[]>([
+  const [drinks , setDrinks] = useState<DrinkData[]>([])
+  setDrinks([
     { name: "Mango Yogurt Smoothie", price: 5.50, category: "Smoothie" },
     { name: "Strawberry Banana Smoothie", price: 5.00, category: "Smoothie" },
     { name: "Blueberry Blast Smoothie", price: 6.00, category: "Smoothie" },

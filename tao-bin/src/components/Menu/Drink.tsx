@@ -1,7 +1,7 @@
 "use client"
 import { useData } from '@/app/DataContext'
 import { useRouter } from 'next/navigation'
-import React, { FC, useEffect } from 'react'
+import React, { FC } from 'react'
 
 interface DrinkDataProps {
   name : string

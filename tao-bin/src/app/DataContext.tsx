@@ -1,15 +1,22 @@
 "use client"
 import React, { createContext, useContext, useState } from 'react';
 
+interface DataDrink {
+  name : string
+  price : number
+  category : string
+  img : string
+}
+
 interface DataContextType {
-  data: any;
-  setData: React.Dispatch<React.SetStateAction<any>>;
+  data: DataDrink | null;
+  setData: React.Dispatch<React.SetStateAction<DataDrink | null>>;
 }
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
 export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<DataDrink | null>(null);
 
   return <DataContext.Provider value={{ data, setData }}>{children}</DataContext.Provider>;
 };

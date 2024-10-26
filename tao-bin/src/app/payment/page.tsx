@@ -2,7 +2,6 @@
 import ListPayment from '@/components/Payment/ListPayment'
 import TitlePayment from '@/components/Payment/TitlePayment'
 import React from 'react'
-import { DataProvider } from '../DataContext'
 
 function PaymentPage() {
   return (

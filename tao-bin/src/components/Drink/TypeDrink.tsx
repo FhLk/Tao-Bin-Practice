@@ -1,17 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function CategoryMenu() {
-  const [isSelected, setIsSelected] = useState<Boolean>(false)
-
-  const selectedOption = (option : number) =>{
-    switch (option) {
-      case 1:
-        
-        break;
-    
-      default:
-        break;
-    }
+  const selectedOption = () =>{
   }
   return (
     <div className='w-full my-5'>
@@ -20,9 +10,9 @@ function CategoryMenu() {
             <div className='flex justify-between h-[100px] items-center my-3'>
                 <img src='./glass-2.svg' height={90} width={90} className='bg-[#FFF2D7] rounded-xl'/>
                 <div className='bg-[#D8AE7E] w-1/2 grid grid-cols-3 gap-0 justify-items-center rounded-full h-[60px] border-4 border-[#F8C794] font-medium text-3xl '>
-                    <button onClick={()=> selectedOption(1)} className={isSelected ? "type-drink-btn-left-selected":`type-drink-btn-left`}>Hot</button>
-                    <button onClick={()=> selectedOption(2)} className='type-drink-btn-middle'>Cold(+5฿)</button>
-                    <button onClick={()=> selectedOption(3)} className='type-drink-btn-right'>Spin(+10฿)</button>
+                    <button onClick={()=> selectedOption()} className="type-drink-btn-left">Hot</button>
+                    <button onClick={()=> selectedOption()} className='type-drink-btn-middle'>Cold(+5฿)</button>
+                    <button onClick={()=> selectedOption()} className='type-drink-btn-right'>Spin(+10฿)</button>
                 </div>
             </div>
         </div>
