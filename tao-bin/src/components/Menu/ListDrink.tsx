@@ -112,7 +112,6 @@ const ListDrink : FC<{id : string}>  = ({ id }) => {
     { name: "Orange Cream Soda", price: 1.75, category: "Soda" },
     { name: "Cherry Vanilla Soda", price: 1.80, category: "Soda" },
   ])
-
   const [smoothies, setSmoothies] = useState<DrinkData[]>([
       { name: "Mango Yogurt Smoothie", price: 5.50, category: "Smoothie" },
       { name: "Strawberry Banana Smoothie", price: 5.00, category: "Smoothie" },
@@ -135,7 +134,6 @@ const ListDrink : FC<{id : string}>  = ({ id }) => {
       { name: "Papaya Paradise", price: 4.50, category: "Smoothie" },
       { name: "Green Power Smoothie", price: 6.00, category: "Smoothie" }
   ])
-
   const [teas , setTeas] = useState<DrinkData[]>([
     { name: "Earl Grey", price: 3.50, category: "Tea" },
     { name: "English Breakfast", price: 3.00, category: "Tea" },
@@ -158,7 +156,6 @@ const ListDrink : FC<{id : string}>  = ({ id }) => {
     { name: "Yerba Mate",price: 3.50,category: "Herbal Tea" },
     { name: "Holy Basil Tea",price: 3.00,category: "Herbal Tea" }
   ])
-
   const [coffees , setCoffee] = useState<DrinkData[]>([
     { name: "Espresso", price: 2.50, category: "Coffee" },
     { name: "Americano", price: 3.00, category: "Coffee" },
@@ -181,7 +178,6 @@ const ListDrink : FC<{id : string}>  = ({ id }) => {
     { name: "Red Eye", price: 4.00, category: "Coffee" },
     { name: "Breve", price: 4.50, category: "Coffee" },
   ])
-  
   const [milk ,setMilk] = useState<DrinkData[]>([
     { name: "Classic Milk Shake", price: 4.50, category: "Milk" },
     { name: "Chocolate Milk", price: 3.00, category: "Milk" },
@@ -204,7 +200,6 @@ const ListDrink : FC<{id : string}>  = ({ id }) => {
     { name: "Earl Grey Milk Tea", price: 4.00, category: "Milk" },
     { name: "Matcha Milk Tea", price: 4.50, category: "Milk" },
   ])
-
   const [soda , setSoda] = useState<DrinkData[]>([
     { name: "Classic Cola", price: 1.50, category: "Soda" },
     { name: "Lemon-Lime Soda", price: 1.25, category: "Soda" },
@@ -234,7 +229,7 @@ const ListDrink : FC<{id : string}>  = ({ id }) => {
   return (
     <div className='grid grid-cols-4 gap-y-5 py-5 justify-items-center'>
       {displayDrinks.map((drink, i) => (
-        <Drink name={drink.name} price={drink.price} img='/glass.svg' categoty={drink.category} key={i}/>
+        <Drink name={drink.name} price={drink.price} img='/glass.svg' category={drink.category} key={i}/>
       ))}
     </div>
   )

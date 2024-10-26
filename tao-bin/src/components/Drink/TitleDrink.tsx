@@ -1,15 +1,22 @@
-import React from 'react'
+import Link from 'next/link'
+import React, { FC } from 'react'
 
-function TitleDrink() {
+interface DataTitle {
+    name : string
+    img : string
+    category : string
+}
+
+const TitleDrink : FC<DataTitle> = ({name,img, category})=> {
     return (
-        <div>
-            <button className='w-[100px] text-7xl font-semibold absolute left-5'>&#10094;</button>
-            <div className='bg-white w-[200px] rounded-full '>
-                <img src='./glass.svg' height={200} width={200} />
+        <div className='flex flex-col items-center'>
+            <Link href={"/menu"} className='w-[100px] text-7xl font-semibold absolute left-10'>&#10094;</Link>
+            <div className='bg-white w-[200px] rounded-full'>
+                <img src={img} height={200} width={200} />
             </div>
             <div className='text-center'>
-                <h1 className='text-5xl font-semibold py-3'>Next.js</h1>
-                <h3 className='text-xl py-3'>Typescript and Javascript</h3>
+                <h1 className='text-5xl font-semibold py-3'>{name}</h1>
+                <h3 className='text-xl py-3'>{category}</h3>
             </div>
         </div>
     )
