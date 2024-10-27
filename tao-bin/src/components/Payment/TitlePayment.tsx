@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 function TitlePayment() {
   return (
     <div className=''>
-        <button className='w-[100px] text-7xl font-semibold absolute left-5'>&#10094;</button>
+        <Link href={"/drink"} className='back-btn'>&#10094;</Link>
         <div className='bg-white w-[200px] rounded-full '>
             <img src='./glass.svg' height={200} width={200} />
         </div>

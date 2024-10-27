@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function SugarBTN() {
+  const [selectedOption, setSelectedOption] = useState<number>(0);
+
+  const handleOptionSelect = (option: number) => {
+    setSelectedOption(option);
+  };
   return (
     <div className='w-full flex gap-5 h-[60px] font-medium text-3xl '>
-        <button className='bg-[#D8AE7E] w-3/4 border-[#F8C794] border-4 rounded-full hover:bg-[#C1C1C1]'>No Sugar</button>
-        <button className='bg-[#D8AE7E] w-3/4 border-[#F8C794] border-4 rounded-full hover:bg-[#C1C1C1]'>Low Sugar</button>
-        <button className='bg-[#D8AE7E] w-3/4 border-[#F8C794] border-4 rounded-full hover:bg-[#C1C1C1]'>Normal Sugar</button>
-        <button className='bg-[#D8AE7E] w-3/4 border-[#F8C794] border-4 rounded-full hover:bg-[#C1C1C1]'>High Sugar</button>
-        <button className='bg-[#D8AE7E] w-3/4 border-[#F8C794] border-4 rounded-full hover:bg-[#C1C1C1]'>Extream Sugar</button>
+        <button onClick={() => handleOptionSelect(1)} className={selectedOption === 1 ? "sugar-btn-selected":"sugar-btn"}>No Sugar</button>
+        <button onClick={() => handleOptionSelect(2)} className={selectedOption === 2 ? "sugar-btn-selected":"sugar-btn"}>Low Sugar</button>
+        <button onClick={() => handleOptionSelect(3)} className={selectedOption === 3 ? "sugar-btn-selected":"sugar-btn"}>Normal Sugar</button>
+        <button onClick={() => handleOptionSelect(4)} className={selectedOption === 4 ? "sugar-btn-selected":"sugar-btn"}>High Sugar</button>
+        <button onClick={() => handleOptionSelect(5)} className={selectedOption === 5 ? "sugar-btn-selected":"sugar-btn"}>Extream Sugar</button>
     </div>
   )
 }

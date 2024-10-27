@@ -4,7 +4,7 @@ function StrawLib() {
   return (
     <div className='w-full my-5'>
         <div className='rounded-xl bg-white h-[300px] px-10 py-5'>
-            <p className='font-semibold text-4xl'>Get Straw and Lid</p>
+            <p className='font-semibold text-4xl'>Straw and Lid</p>
             <div className='h-[100px] items-center my-3'>
                 <ul className='space-y-7'>
                     <li className='flex items-center justify-between'>

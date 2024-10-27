@@ -19,6 +19,10 @@ body {
   background: var(--background);
 }
 
+.back-btn{
+  @apply w-[100px] text-7xl font-semibold absolute left-10;
+}
+
 .type-drink-btn-left{
   @apply w-full border-r-4 border-[#F8C794] hover:bg-[#C1C1C1] rounded-l-full;
 }
@@ -33,6 +37,26 @@ body {
 
 .type-drink-btn-left-selected{
   @apply bg-[#C1C1C1] w-full rounded-l-full border-r-4 border-[#F8C794];
+}
+
+.type-drink-btn-middle-selected{
+  @apply w-full border-x-4 border-[#F8C794] bg-[#C1C1C1];
+}
+
+.type-drink-btn-right-selected{
+  @apply w-full border-l-4 border-[#F8C794] bg-[#C1C1C1] rounded-r-full;
+}
+
+.sugar-btn{
+  @apply bg-[#D8AE7E] w-3/4 border-[#F8C794] border-4 rounded-full hover:bg-[#C1C1C1];
+}
+
+.sugar-btn-selected{
+  @apply w-3/4 border-[#F8C794] border-4 rounded-full bg-[#C1C1C1];
+}
+
+.manange-btn{
+  @apply h-[100px] w-fit p-10 rounded-full text-5xl flex items-center justify-center font-semibold;
 }
 
 
