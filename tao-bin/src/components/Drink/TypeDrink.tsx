@@ -1,14 +1,28 @@
 import React, { FC, useState } from 'react'
 
 interface TypeDrinkData {
-  // onAdd : (type : string,price : number) => void
+  onType : (price : number,type : string) => void
 }
 
-const TypeDrink : FC<TypeDrinkData> = () => {
+const TypeDrink : FC<TypeDrinkData> = ({ onType }) => {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
 
   const handleOptionSelect = (option: number) => {
     setSelectedOption(option);
+    switch (option) {
+      case 1:
+        onType(0,"hot")
+        break;
+      case 2:
+        onType(5,"cold")
+        break;
+      case 3:
+        onType(10,"spin")
+        break;
+      default:
+        onType(0,"hot")
+        break;
+    }
   };
   
   return (

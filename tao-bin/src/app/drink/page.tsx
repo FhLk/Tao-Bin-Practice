@@ -8,18 +8,42 @@ import React from 'react'
 import { useData } from '../DataContext'
 import Link from 'next/link'
 
+interface NewDrinkData {
+  type : string
+  price : number
+}
+
 function DrinkPage() {
   const { data, setData } = useData();
-  const setNewDrink = ( newDrink : {type : string, price : number}) =>{
-    console.log(newDrink);
+  const setNewDrink = (price : number,type:string) =>{
+    console.log("Drink Type : " + type);
+    console.log("Drink Price : "+ price);
+  }
+
+  const setNewSugar = (type : string,level : number, price : number) =>{
+    console.log("Sugar Type : " + type);
+    console.log("Sugar Level : " + level);
+    console.log("Sugar Price : " + price);
+  }
+
+  const setNewTopping = (isAdd : Boolean) =>{
+    console.log("Is Topping : " + isAdd);
+  }
+
+  const setStraw = (isGetStraw : Boolean) =>{
+    console.log("Is Get Straw : " + isGetStraw);
+  }
+
+  const setLid = (isGetLid : Boolean) =>{
+    console.log("Is Get Lid : " + isGetLid);
   }
   return (
     <div className='flex flex-col items-center py-3'>
         <TitleDrink name={data?.name} img={data?.img} category={data?.category} />
-        <TypeDrink/>
-        <SugarLevel/>
-        <MixerDrink/>
-        <StrawLib/>
+        <TypeDrink onType={setNewDrink}/>
+        <SugarLevel onLevel={setNewSugar}/>
+        <MixerDrink onAdd={setNewTopping}/>
+        <StrawLib onGetStraw={setStraw} onGetLid={setLid}/>
         <div className='w-full flex justify-between'>
           <Link href={`/menu/${data?.category}`} className='manange-btn bg-gray-300 hover:bg-red-400 '>
             Cancel

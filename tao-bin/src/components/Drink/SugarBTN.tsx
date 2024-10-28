@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 
-function SugarBTN() {
+interface LevelSugarData {
+  onLevel : (level : number) => void
+}
+
+const SugarBTN : FC<LevelSugarData> = ({ onLevel }) => {
   const [selectedOption, setSelectedOption] = useState<number>(0);
 
   const handleOptionSelect = (option: number) => {
     setSelectedOption(option);
+    onLevel(option)
   };
   return (
     <div className='w-full flex gap-5 h-[60px] font-medium text-3xl '>
