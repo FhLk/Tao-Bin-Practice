@@ -8,13 +8,8 @@ import React, { useEffect, useState } from 'react'
 import { useData } from '../DataContext'
 import Link from 'next/link'
 
-interface NewDrinkData {
-  type : string
-  price : number
-}
-
 function DrinkPage() {
-  const { data, setData } = useData();
+  const { data } = useData();
   const [ priceTypeDrink , setPriceTypeDrink ] = useState<number>(0)
   const [ priceSugarLevel , setPriceSugarlevel] = useState<number>(0)
   const [ priceTopping , setPriceTopping] = useState<number>(0)
@@ -35,17 +30,17 @@ function DrinkPage() {
     setPriceSugarlevel(price)
   }
 
-  const setNewTopping = (isAdd : Boolean,price : number) =>{
+  const setNewTopping = (isAdd : boolean,price : number) =>{
     setTotalNewPrice(0)
     console.log("Is Topping : " + isAdd);
     setPriceTopping(price)
   }
 
-  const setStraw = (isGetStraw : Boolean) =>{
+  const setStraw = (isGetStraw : boolean) =>{
     console.log("Is Get Straw : " + isGetStraw);
   }
 
-  const setLid = (isGetLid : Boolean) =>{
+  const setLid = (isGetLid : boolean) =>{
     console.log("Is Get Lid : " + isGetLid);
   }
 

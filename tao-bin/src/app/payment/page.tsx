@@ -2,10 +2,8 @@
 import ListPayment from '@/components/Payment/ListPayment'
 import TitlePayment from '@/components/Payment/TitlePayment'
 import React from 'react'
-import { useData } from '../DataContext';
 
 function PaymentPage() {
-  const { data } = useData();  
   return (
     <div className='flex flex-col items-center py-3'>
       <TitlePayment/>

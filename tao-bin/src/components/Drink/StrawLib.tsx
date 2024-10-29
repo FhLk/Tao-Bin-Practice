@@ -1,21 +1,21 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 
 interface GetStrawAndLid{
-    onGetStraw : (isGetStraw : Boolean) => void
-    onGetLid : (isGetLid : Boolean) => void
+    onGetStraw : (isGetStraw : boolean) => void
+    onGetLid : (isGetLid : boolean) => void
 }
 
 
 const StrawLib : FC<GetStrawAndLid> = ({ onGetStraw , onGetLid }) => {
-    const [isGetStraw, setIsGetStraw] = useState<Boolean>(false)
-    const [isGetLid, setIsGetLid] = useState<Boolean>(false)
+    const [isGetStraw, setIsGetStraw] = useState<boolean>(false)
+    const [isGetLid, setIsGetLid] = useState<boolean>(false)
 
-    const handleGetStraw = (isAdd : Boolean) => {
+    const handleGetStraw = (isAdd : boolean) => {
         onGetStraw(isAdd)
         setIsGetStraw(isAdd)
     };
 
-    const handleGetLid = (isAdd : Boolean) =>{
+    const handleGetLid = (isAdd : boolean) =>{
         onGetLid(isAdd)
         setIsGetLid(isAdd)
     }

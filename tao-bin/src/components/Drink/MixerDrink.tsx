@@ -1,12 +1,12 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 
 interface AddExtraData{
-    onAdd : (isAdd : Boolean,price : number) => void
+    onAdd : (isAdd : boolean,price : number) => void
 }
 
 const MixerDrink : FC<AddExtraData> = ({ onAdd }) => {
-    const [isAddExtra, setIsAddExtra] = useState<Boolean>(false)
-    const handleAddExtra = (isAdd : Boolean) => {
+    const [isAddExtra, setIsAddExtra] = useState<boolean>(false)
+    const handleAddExtra = (isAdd : boolean) => {
         onAdd(isAdd,isAdd ? 10:0)
         setIsAddExtra(isAdd)
     };
