@@ -9,14 +9,14 @@ interface DataDrink {
 }
 
 interface DataContextType {
-  data: DataDrink | null;
-  setData: React.Dispatch<React.SetStateAction<DataDrink | null>>;
+  data: DataDrink;
+  setData: React.Dispatch<React.SetStateAction<DataDrink>>;
 }
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
 export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [data, setData] = useState<DataDrink | null>(null);
+  const [data, setData] = useState<DataDrink>({name : "", price : 0,category:"",img:""});
 
   return <DataContext.Provider value={{ data, setData }}>{children}</DataContext.Provider>;
 };

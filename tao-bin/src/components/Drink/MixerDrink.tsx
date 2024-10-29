@@ -1,13 +1,13 @@
 import React, { FC, useEffect, useState } from 'react'
 
 interface AddExtraData{
-    onAdd : (isAdd : Boolean) => void
+    onAdd : (isAdd : Boolean,price : number) => void
 }
 
 const MixerDrink : FC<AddExtraData> = ({ onAdd }) => {
     const [isAddExtra, setIsAddExtra] = useState<Boolean>(false)
     const handleAddExtra = (isAdd : Boolean) => {
-        onAdd(isAdd)
+        onAdd(isAdd,isAdd ? 10:0)
         setIsAddExtra(isAdd)
     };
     return (
@@ -16,10 +16,10 @@ const MixerDrink : FC<AddExtraData> = ({ onAdd }) => {
                 <p className='font-semibold text-4xl'>Add Extra</p>
                 <div className='h-[100px] items-center my-3'>
                     <ul className='space-y-7'>
-                        <li className='flex items-center justify-between' onClick={() => handleAddExtra(!isAddExtra)}>
+                        <li className='flex items-center justify-between' >
                             <img src='./oreo.svg' height={90} width={90} className='bg-[#FFF2D7] rounded-xl' />
-                            <label htmlFor="horizontal-list-checkbox-oreo" className="text-5xl font-medium w-10/12">Topping Oreo</label>
-                            <input id="horizontal-list-checkbox-oreo" type="checkbox" value="" name="list-checkbox" className="w-[90px] h-[90px] rounded-xl"/>
+                            <label htmlFor="horizontal-list-checkbox-oreo" className="text-5xl font-medium w-10/12">Topping Oreo (+10฿)</label>
+                            <input id="horizontal-list-checkbox-oreo" type="checkbox" onChange={() => handleAddExtra(!isAddExtra)} value="" name="list-checkbox" className="w-[90px] h-[90px] rounded-xl"/>
                         </li>
                     </ul>
                 </div>
