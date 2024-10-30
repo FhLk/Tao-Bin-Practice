@@ -2,9 +2,9 @@ import Link from 'next/link'
 import React, { FC } from 'react'
 
 interface DataTitle {
-    name : string | undefined
-    img : string | undefined
-    category : string | undefined
+    name : string
+    img : string
+    category : string
 }
 
 const TitleDrink : FC<DataTitle> = ({name,img, category})=> {

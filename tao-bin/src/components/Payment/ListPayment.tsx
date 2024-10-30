@@ -2,7 +2,7 @@ import React from 'react'
 
 function ListPayment() {
   return (
-    <div className='grid grid-cols-3 gap-5 my-6'>
+    <div className='grid grid-cols-3 gap-5 my-5'>
         <button className='bg-white h-[200px] w-[200px] rounded-2xl flex flex-col items-center justify-center hover:bg-[#FFE0B5]'>
             <img src='./cash.svg' height={100} width={100}/>
             <p className='font-semibold text-4xl'>Cash</p>
